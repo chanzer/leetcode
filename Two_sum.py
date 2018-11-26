@@ -14,3 +14,17 @@ class Solution:
 			for j in range(i+1,l):
 				if nums[i]+nums[j] == target:
 					return [i,j]
+
+# 更快更强
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        placeHolder = {}
+        for i, x in enumerate(nums):
+            if target - x in placeHolder:
+                return placeHolder[target - x], i
+            placeHolder[x] = i

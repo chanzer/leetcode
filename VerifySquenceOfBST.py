@@ -27,3 +27,4 @@ class Solution:
 			if sequence[i] <root:
 				return False
 		return self.VerifySquenceOfBST(sequence[0:left]) or self.VerifySquenceOfBST(sequence[left:length-1])
+
